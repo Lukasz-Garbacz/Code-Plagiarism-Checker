@@ -1,0 +1,22 @@
+krok 1:
+Prosze wpisac rozszerzenie sprawdzanych plikow, jesli jest to jeden z rozpoznawanych jezykow reszta pol zostanie uzupelniona automatycznie
+krok 2:
+Prosze wybrac folder zawierajacy wszystkie pliki ktore maja zostac poddane sprawdzeniu
+krok 3:
+Aby rozpoczac proces sprawdzania prosze wcisnac przycisk wykonaj sprawdzanie
+krok 4:
+Po zakonczeniu procesu sprawdzania przycisk wyswietl raport zostanie odblokowany
+
+Parametry procesu sprawdzania (prosze oddzielac je spacja):
+wyrazenia definiujace zmienne - wszystkie wyrazenia poprzedzajace nazwy zmiennych
+lista pomijanych syntaxow - napotkanie ktoregos z tych wyrazen w danej linijce bedzie skutkowalo pominieciem jej przez program
+oznaczenia komentarzy jednolinijkowych - wyrazenie poprzedzajace tresc komentarza
+oznaczenia komentarzy wielolinijkowych -  kolejno: wyrazenie rozpoczynajace komentarz, wyrazenie konczace komentarz, oddzielone spacja
+wyrazenia definiujace moduly - kolejno: wyrazenie rozpoczynajace modul, wyrazenie konczace modul, potrzebne glownie do trybu modulowego
+liczba zapisywanych stron - liczba stron wynikowych pobranych dla kazdego zapytania, zwiekszenie tego parametru znacznie zwieksza czas pracy programu
+liczba sprawdzanych adresow - liczba najpopularniejszych adresow w ktorych bedzie wyszukiwany caly kod linijka po linijce, zaleca sie pozostawienie tego parametru na 10*liczba zapisywanych stron
+traktuj pliki jako jedna calosc - wszystkie pliki z folderu zostana polaczone w jeden i tak beda traktowane przez algorytmy sprawdzania
+
+Tryby pracy:
+Modulowy (szybki) - algorytm bedzie wyszukiwal moduly znalezione w pliku, oznaczone poprzez wprowadzone przez uzytkownika parametry, jest to tryb duzo szybszy niz Linijkowy, natomiast o nieco mniejszej precyzji
+Linijkowy (wolny) - algorytm bedzie wyszukiwal kod pliku linijka po linijce, jest to tryb znacznie wolniejszy od Modulowego, natomiast o wiekszej precyzji, zwlaszcza w przypadku plagiatu czesciowego, lub zmian w kodzie
